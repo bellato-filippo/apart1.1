@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Liste des pieèces de l'appartment</h1>
+        <ul>
+        <% for(let i = 0; i < appartment.len(); i++) {%>
+            <li>Pièce: <%= appartment.get(i).name %> <%= appartment.get(i).getArea() %> m2</li>
+        <% } %>
+        </ul>
+        Surface totale: <%= appartment.totalArea() %>
+        <form action="/appartment/newroom" method="get">
+            <button type="submit">Encoder une autre pièce</button>
+        </form>
+    </body>
+</html>
